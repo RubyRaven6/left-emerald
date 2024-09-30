@@ -1,0 +1,25 @@
+mapscripts LittlerootTown_BirchsWarehouse_MapScripts {}
+
+script LittlerootTown_BirchsWarehouse_EventScript_PaperStack {
+    lockall
+	msgbox ("It's a random stack of papers.")
+    releaseall
+}
+
+script LittlerootTown_BirchsWarehouse_EventScript_Naughty {
+    lockall
+	msgbox ("Eh? There's an adult comic here!")
+    releaseall
+}
+
+script LittlerootTown_BirchsWarehouse_EventScript_Computer {
+    lockall
+	msgbox ("It has a spreadsheet of the items stored\nin the warehouse.")
+    releaseall
+}
+
+script LittlerootTown_BirchsWarehouse_EventScript_Bookshelf {
+    lockall
+	msgbox ("It's different books and journals that\nare archived here.")
+    releaseall
+}

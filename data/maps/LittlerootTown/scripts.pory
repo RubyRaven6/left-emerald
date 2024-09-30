@@ -1027,13 +1027,11 @@ script LittlerootTown_EventScript_WarehouseSign {
     releaseall
 }
 
-script LittlerootTown_EventScript_GymSign {
+script LittlerootTown_EventScript_OldGymSign {
     lockall
-	msgbox ("It's an old worn out sign, but\n")
-	msgbox ("you can faintly read its text.\p")
-	msgbox ("I want to go see what's going on,\n")
-	msgbox ("LITTLEROOT TOWN POKÉMON GYM\n")
-	msgbox ("LEADER: BIRCH\l")
+	msgbox ("It's an old worn out sign, but you can\n faintly read its text.")
+	msgbox ("LITTLEROOT TOWN POKÉMON GYM\p")
+	msgbox ("LEADER: BIRCH\n")
 	msgbox ("The pursuant scientist!")
     releaseall
 }

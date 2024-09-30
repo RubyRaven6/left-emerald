@@ -2051,22 +2051,18 @@ LittlerootTown_EventScript_WarehouseSign::
 	return
 
 
-LittlerootTown_EventScript_GymSign::
+LittlerootTown_EventScript_OldGymSign::
 # 1031 "data/maps/LittlerootTown/scripts.pory"
 	lockall
 # 1032 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_GymSign_Text_0
+	msgbox LittlerootTown_EventScript_OldGymSign_Text_0
 # 1033 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_GymSign_Text_1
+	msgbox LittlerootTown_EventScript_OldGymSign_Text_1
 # 1034 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_GymSign_Text_2
+	msgbox LittlerootTown_EventScript_OldGymSign_Text_2
 # 1035 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_GymSign_Text_3
+	msgbox LittlerootTown_EventScript_OldGymSign_Text_3
 # 1036 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_GymSign_Text_4
-# 1037 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_GymSign_Text_5
-# 1038 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
 	return
 
@@ -2075,26 +2071,18 @@ LittlerootTown_EventScript_WarehouseSign_Text_0:
 # 1026 "data/maps/LittlerootTown/scripts.pory"
 	.string "BIRCH'S WAREHOUSE$"
 
-LittlerootTown_EventScript_GymSign_Text_0:
+LittlerootTown_EventScript_OldGymSign_Text_0:
 # 1032 "data/maps/LittlerootTown/scripts.pory"
-	.string "It's an old worn out sign, but\n$"
+	.string "It's an old worn out sign, but you can\n faintly read its text.$"
 
-LittlerootTown_EventScript_GymSign_Text_1:
+LittlerootTown_EventScript_OldGymSign_Text_1:
 # 1033 "data/maps/LittlerootTown/scripts.pory"
-	.string "you can faintly read its text.\p$"
+	.string "LITTLEROOT TOWN POKÉMON GYM\p$"
 
-LittlerootTown_EventScript_GymSign_Text_2:
+LittlerootTown_EventScript_OldGymSign_Text_2:
 # 1034 "data/maps/LittlerootTown/scripts.pory"
-	.string "I want to go see what's going on,\n$"
+	.string "LEADER: BIRCH\n$"
 
-LittlerootTown_EventScript_GymSign_Text_3:
+LittlerootTown_EventScript_OldGymSign_Text_3:
 # 1035 "data/maps/LittlerootTown/scripts.pory"
-	.string "LITTLEROOT TOWN POKÉMON GYM\n$"
-
-LittlerootTown_EventScript_GymSign_Text_4:
-# 1036 "data/maps/LittlerootTown/scripts.pory"
-	.string "LEADER: BIRCH\l$"
-
-LittlerootTown_EventScript_GymSign_Text_5:
-# 1037 "data/maps/LittlerootTown/scripts.pory"
 	.string "The pursuant scientist!$"

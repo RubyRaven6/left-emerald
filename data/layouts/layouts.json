@@ -4410,6 +4410,26 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
+    },
+    {
+      "id": "LAYOUT_LITTLEROOT_TOWN_BIRCHS_WAREHOUSE",
+      "name": "LittlerootTown_BirchsWarehouse_Layout",
+      "width": 13,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/LittlerootTown_BirchsWarehouse/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTown_BirchsWarehouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_LITTLEROOT_TOWN_OLD_GYM",
+      "name": "LittlerootTown_OldGym_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_RustboroGym",
+      "border_filepath": "data/layouts/LittlerootTown_OldGym/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTown_OldGym/map.bin"
     }
   ]
 }

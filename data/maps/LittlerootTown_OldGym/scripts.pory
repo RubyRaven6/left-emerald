@@ -1,0 +1,15 @@
+mapscripts LittlerootTown_OldGym_MapScripts {}
+
+script LittlerootTown_OldGym_EventScript_GymStatue {
+    lockall
+	msgbox("LITTLEROOT POKéMON GYM\p")
+	msgbox("BIRCH'S CERTIFIED TRAINERS:\n")
+	msgbox("STEVEN\n")
+    msgbox("WALLACE\n")
+    msgbox("PHOEBE\n")
+    msgbox("WINONA\n")
+    msgbox("FLANNERY\n")
+    msgbox("BRAWLY\n")
+    msgbox("ROXANNE\n")
+    releaseall
+}
