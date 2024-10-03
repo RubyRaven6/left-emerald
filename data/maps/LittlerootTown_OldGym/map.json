@@ -14,11 +14,69 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 4,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LittlerootTown_OldGym_EventScript_PokeballWingull",
+      "flag": "FLAG_WINGULL_CHOSEN"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 5,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LittlerootTown_OldGym_EventScript_PokeballNumel",
+      "flag": "FLAG_NUMEL_CHOSEN"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 6,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LittlerootTown_OldGym_EventScript_PokeballLarvitar",
+      "flag": "FLAG_LARVITAR_CHOSEN"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 7,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LittlerootTown_OldGym_EventScript_PokeballSpheal",
+      "flag": "FLAG_SPHEAL_CHOSEN"
+    }
   ],
   "warp_events": [
     {
       "x": 5,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_LITTLEROOT_TOWN",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 6,
       "y": 9,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN",
@@ -31,7 +89,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 7,
+      "x": 8,
       "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",

@@ -4424,7 +4424,7 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN_OLD_GYM",
       "name": "LittlerootTown_OldGym_Layout",
-      "width": 11,
+      "width": 12,
       "height": 10,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_RustboroGym",

@@ -42,10 +42,10 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
+#define FLAG_WINGULL_CHOSEN   0x20 // After choosing Wingull.
+#define FLAG_NUMEL_CHOSEN     0x21 // After choosing Numel.
+#define FLAG_LARVITAR_CHOSEN  0x22 // After choosing Larvitar
+#define FLAG_SPHEAL_CHOSEN    0x23 // After choosing Spheal
 #define FLAG_UNUSED_0x024    0x24 // Unused Flag
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag

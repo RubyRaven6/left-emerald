@@ -42183,3 +42183,37 @@ F_TRAINER_FEMALE |
             },
         },
     },
+#line 16877
+    [TRAINER_RUBY] =
+    {
+#line 16878
+        .trainerName = _("RUBY"),
+#line 16879
+        .trainerClass = TRAINER_CLASS_DEVELOPER,
+#line 16880
+        .trainerPic = TRAINER_PIC_DEVELOPER,
+        .encounterMusic_gender = 
+#line 16881
+F_TRAINER_FEMALE | 
+#line 16882
+            TRAINER_ENCOUNTER_MUSIC_FEMALE,
+#line 16883
+        .doubleBattle = FALSE,
+#line 16884
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = 1,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 16886
+            .species = SPECIES_ZIGZAGOON,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16888
+            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
+#line 16887
+            .lvl = 5,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },

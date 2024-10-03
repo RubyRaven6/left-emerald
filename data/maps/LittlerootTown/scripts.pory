@@ -1035,3 +1035,38 @@ script LittlerootTown_EventScript_OldGymSign {
 	msgbox ("The pursuant scientist!")
     releaseall
 }
+
+script LittlerootTown_EventScript_DeveloperRuby{
+	if (!(flag(FLAG_WINGULL_CHOSEN) || flag(FLAG_NUMEL_CHOSEN) || flag(FLAG_LARVITAR_CHOSEN) || flag(FLAG_SPHEAL_CHOSEN))){
+		lockall
+		msgbox(LittlerootTown_Idle_Ruby, MSGBOX_DEFAULT)
+		waitmessage
+		releaseall
+	}
+	else{
+		call(LittlerootTown_EventScript_DeveloperRubyBattle)
+	}
+}
+
+script LittlerootTown_EventScript_DeveloperRubyBattle{
+	trainerbattle_single(TRAINER_RUBY, LittlerootTown_Ruby_Intro, LittlerootTown_Ruby_Outro)
+	msgbox(LittlerootTown_PostBattle_Ruby, MSGBOX_AUTOCLOSE) 
+	waitmessage
+	end
+}
+
+text LittlerootTown_Idle_Ruby{
+	"RUBY: Hi! I'm the developer! Nice to\nmeet ya."
+}
+
+text LittlerootTown_Ruby_Intro{
+    "RUBY: Oh hey! You got a Pokémon! Let's battle!"
+}
+ 
+text LittlerootTown_Ruby_Outro{
+    "RUBY: That was fun!"
+}
+ 
+text LittlerootTown_PostBattle_Ruby{
+    "RUBY: I look forward to next time!"
+}

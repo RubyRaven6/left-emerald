@@ -2067,6 +2067,51 @@ LittlerootTown_EventScript_OldGymSign::
 	return
 
 
+LittlerootTown_EventScript_DeveloperRuby::
+# 1040 "data/maps/LittlerootTown/scripts.pory"
+	goto_if_unset FLAG_WINGULL_CHOSEN, LittlerootTown_EventScript_DeveloperRuby_3
+LittlerootTown_EventScript_DeveloperRuby_2:
+# 1047 "data/maps/LittlerootTown/scripts.pory"
+	call LittlerootTown_EventScript_DeveloperRubyBattle
+	return
+
+LittlerootTown_EventScript_DeveloperRuby_1:
+# 1041 "data/maps/LittlerootTown/scripts.pory"
+	lockall
+# 1042 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_Idle_Ruby, MSGBOX_DEFAULT
+# 1043 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+# 1044 "data/maps/LittlerootTown/scripts.pory"
+	releaseall
+	return
+
+LittlerootTown_EventScript_DeveloperRuby_3:
+# 1040 "data/maps/LittlerootTown/scripts.pory"
+	goto_if_unset FLAG_NUMEL_CHOSEN, LittlerootTown_EventScript_DeveloperRuby_5
+	goto LittlerootTown_EventScript_DeveloperRuby_2
+
+LittlerootTown_EventScript_DeveloperRuby_5:
+# 1040 "data/maps/LittlerootTown/scripts.pory"
+	goto_if_unset FLAG_LARVITAR_CHOSEN, LittlerootTown_EventScript_DeveloperRuby_7
+	goto LittlerootTown_EventScript_DeveloperRuby_2
+
+LittlerootTown_EventScript_DeveloperRuby_7:
+# 1040 "data/maps/LittlerootTown/scripts.pory"
+	goto_if_unset FLAG_SPHEAL_CHOSEN, LittlerootTown_EventScript_DeveloperRuby_1
+	goto LittlerootTown_EventScript_DeveloperRuby_2
+
+
+LittlerootTown_EventScript_DeveloperRubyBattle::
+# 1052 "data/maps/LittlerootTown/scripts.pory"
+	trainerbattle_single TRAINER_RUBY, LittlerootTown_Ruby_Intro, LittlerootTown_Ruby_Outro
+# 1053 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_PostBattle_Ruby, MSGBOX_AUTOCLOSE
+# 1054 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+	end
+
+
 LittlerootTown_EventScript_WarehouseSign_Text_0:
 # 1026 "data/maps/LittlerootTown/scripts.pory"
 	.string "BIRCH'S WAREHOUSE$"
@@ -2086,3 +2131,19 @@ LittlerootTown_EventScript_OldGymSign_Text_2:
 LittlerootTown_EventScript_OldGymSign_Text_3:
 # 1035 "data/maps/LittlerootTown/scripts.pory"
 	.string "The pursuant scientist!$"
+
+LittlerootTown_Idle_Ruby::
+# 1058 "data/maps/LittlerootTown/scripts.pory"
+	.string "RUBY: Hi! I'm the developer! Nice to\nmeet ya.$"
+
+LittlerootTown_Ruby_Intro::
+# 1062 "data/maps/LittlerootTown/scripts.pory"
+	.string "RUBY: Oh hey! You got a Pokémon! Let's battle!$"
+
+LittlerootTown_Ruby_Outro::
+# 1066 "data/maps/LittlerootTown/scripts.pory"
+	.string "RUBY: That was fun!$"
+
+LittlerootTown_PostBattle_Ruby::
+# 1070 "data/maps/LittlerootTown/scripts.pory"
+	.string "RUBY: I look forward to next time!$"
