@@ -2112,6 +2112,93 @@ LittlerootTown_EventScript_DeveloperRubyBattle::
 	end
 
 
+LittlerootTown_EventScript_Kyogre::
+# 1059 "data/maps/LittlerootTown/scripts.pory"
+	lockall
+# 1060 "data/maps/LittlerootTown/scripts.pory"
+	setflag FLAG_UNUSED_0x496
+# 1061 "data/maps/LittlerootTown/scripts.pory"
+	playmoncry SPECIES_KYOGRE, CRY_MODE_ENCOUNTER
+# 1062 "data/maps/LittlerootTown/scripts.pory"
+	delay 40
+# 1063 "data/maps/LittlerootTown/scripts.pory"
+	waitmoncry
+# 1064 "data/maps/LittlerootTown/scripts.pory"
+	setwildbattle SPECIES_KYOGRE, 15, ITEM_BLUE_ORB
+# 1065 "data/maps/LittlerootTown/scripts.pory"
+	dowildbattle
+# 1066 "data/maps/LittlerootTown/scripts.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 1067 "data/maps/LittlerootTown/scripts.pory"
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_eq LittlerootTown_EventScript_Kyogre_2
+# 1070 "data/maps/LittlerootTown/scripts.pory"
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq LittlerootTown_EventScript_Kyogre_3
+# 1073 "data/maps/LittlerootTown/scripts.pory"
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq LittlerootTown_EventScript_Kyogre_4
+# 1076 "data/maps/LittlerootTown/scripts.pory"
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq LittlerootTown_EventScript_Kyogre_5
+LittlerootTown_EventScript_Kyogre_1:
+# 1079 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+# 1080 "data/maps/LittlerootTown/scripts.pory"
+	releaseall
+	return
+
+LittlerootTown_EventScript_Kyogre_2:
+# 1068 "data/maps/LittlerootTown/scripts.pory"
+	call Won_or_Caught
+	goto LittlerootTown_EventScript_Kyogre_1
+
+LittlerootTown_EventScript_Kyogre_3:
+# 1071 "data/maps/LittlerootTown/scripts.pory"
+	call Won_or_Caught
+	goto LittlerootTown_EventScript_Kyogre_1
+
+LittlerootTown_EventScript_Kyogre_4:
+# 1074 "data/maps/LittlerootTown/scripts.pory"
+	call RanAway
+	goto LittlerootTown_EventScript_Kyogre_1
+
+LittlerootTown_EventScript_Kyogre_5:
+# 1077 "data/maps/LittlerootTown/scripts.pory"
+	call RanAway
+	goto LittlerootTown_EventScript_Kyogre_1
+
+
+Won_or_Caught::
+# 1084 "data/maps/LittlerootTown/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 1085 "data/maps/LittlerootTown/scripts.pory"
+	removeobject 10
+# 1086 "data/maps/LittlerootTown/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 1087 "data/maps/LittlerootTown/scripts.pory"
+	msgbox Won_or_Caught_Text_0
+	return
+
+
+RanAway::
+# 1092 "data/maps/LittlerootTown/scripts.pory"
+	playmoncry SPECIES_KYOGRE, CRY_MODE_ENCOUNTER
+# 1093 "data/maps/LittlerootTown/scripts.pory"
+	msgbox RanAway_Text_0, MSGBOX_AUTOCLOSE
+# 1094 "data/maps/LittlerootTown/scripts.pory"
+	delay 20
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 1096 "data/maps/LittlerootTown/scripts.pory"
+	removeobject 10
+# 1097 "data/maps/LittlerootTown/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 1098 "data/maps/LittlerootTown/scripts.pory"
+	msgbox RanAway_Text_1
+	return
+
+
 LittlerootTown_EventScript_WarehouseSign_Text_0:
 # 1026 "data/maps/LittlerootTown/scripts.pory"
 	.string "BIRCH'S WAREHOUSE$"
@@ -2132,18 +2219,30 @@ LittlerootTown_EventScript_OldGymSign_Text_3:
 # 1035 "data/maps/LittlerootTown/scripts.pory"
 	.string "The pursuant scientist!$"
 
+Won_or_Caught_Text_0:
+# 1087 "data/maps/LittlerootTown/scripts.pory"
+	.string "You are the Pokemon Master!$"
+
+RanAway_Text_0:
+# 1093 "data/maps/LittlerootTown/scripts.pory"
+	.string "Kyuhh....$"
+
+RanAway_Text_1:
+# 1098 "data/maps/LittlerootTown/scripts.pory"
+	.string "You are not the Pokemon Master.$"
+
 LittlerootTown_Idle_Ruby::
-# 1058 "data/maps/LittlerootTown/scripts.pory"
+# 1102 "data/maps/LittlerootTown/scripts.pory"
 	.string "RUBY: Hi! I'm the developer! Nice to\nmeet ya.$"
 
 LittlerootTown_Ruby_Intro::
-# 1062 "data/maps/LittlerootTown/scripts.pory"
+# 1106 "data/maps/LittlerootTown/scripts.pory"
 	.string "RUBY: Oh hey! You got a Pokémon! Let's battle!$"
 
 LittlerootTown_Ruby_Outro::
-# 1066 "data/maps/LittlerootTown/scripts.pory"
+# 1110 "data/maps/LittlerootTown/scripts.pory"
 	.string "RUBY: That was fun!$"
 
 LittlerootTown_PostBattle_Ruby::
-# 1070 "data/maps/LittlerootTown/scripts.pory"
+# 1114 "data/maps/LittlerootTown/scripts.pory"
 	.string "RUBY: I look forward to next time!$"
