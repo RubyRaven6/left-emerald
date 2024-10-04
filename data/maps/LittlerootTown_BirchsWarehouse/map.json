@@ -209,7 +209,7 @@
       "x": 11,
       "y": 1,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "LittlerootTown_BirchsWarehouse_EventScript_Computer"
     },
     {
@@ -217,7 +217,7 @@
       "x": 12,
       "y": 1,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "LittlerootTown_BirchsWarehouse_EventScript_Computer"
     }
   ]

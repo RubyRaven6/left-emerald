@@ -3046,4 +3046,10 @@ extern const u8 gText_PlantBerry[];
 extern const u8 gText_AM[];
 extern const u8 gText_PM[];
 
+// Practice to add Multichoice
+extern const u8 gText_WingullStarter[];
+extern const u8 gText_NumelStarter[];
+extern const u8 gText_LarvitarStarter[];
+extern const u8 gText_SphealStarter[];
+
 #endif // GUARD_STRINGS_H

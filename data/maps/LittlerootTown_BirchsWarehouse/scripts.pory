@@ -15,6 +15,34 @@ script LittlerootTown_BirchsWarehouse_EventScript_Naughty {
 script LittlerootTown_BirchsWarehouse_EventScript_Computer {
     lockall
 	msgbox ("It has a spreadsheet of the items stored\nin the warehouse.")
+    msgbox ("There's a folder here called\n “Gym Roster (Old)”.")
+    msgbox ("Open it?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        message("Choose a Pokémon to view.")
+        multichoice(25, 4, 115, 0)
+        closemessage
+        if(var(VAR_RESULT) == 0){
+            showmonpic(SPECIES_WINGULL, 10,3)
+            msgbox("Notes:  Good for setting rain.",MSGBOX_DEFAULT)
+            hidemonpic
+        }
+        if(var(VAR_RESULT) == 1){
+            showmonpic(SPECIES_NUMEL, 10,3)
+            msgbox("Notes:  Good for setting sun.",MSGBOX_DEFAULT)
+            hidemonpic
+        }
+        if(var(VAR_RESULT) == 2){
+            showmonpic(SPECIES_LARVITAR, 10,3)
+            msgbox("Notes:  Good for setting sandstorms.",MSGBOX_DEFAULT)
+            hidemonpic
+        }
+        if(var(VAR_RESULT) == 3){
+            showmonpic(SPECIES_SPHEAL, 10,3)
+            msgbox("Notes:  Good for setting hail.",MSGBOX_DEFAULT)
+            hidemonpic
+        }
+    }
+    msgbox("Better close this folder before leaving.")
     releaseall
 }
 
