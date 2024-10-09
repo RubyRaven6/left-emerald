@@ -6,7 +6,7 @@ raw `
 
 LittlerootTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_OnTransition
-	map_script MAP_SCRIPT_ON_LOAD, LittlerootTown_NewRivalSetup
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_MayCallsOver
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_OnFrame
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, LittlerootTown_OnWarp
 	.byte 0
@@ -44,6 +44,7 @@ LittlerootTown_MapScripts::
 LittlerootTown_OnTransition:
 	setflag FLAG_VISITED_LITTLEROOT_TOWN
 	call Common_EventScript_SetupRivalGfxId
+	call_if_unset FLAG_NEW_MAY_BATTLE, LittlerootTown_EventScript_NewRivalSetup
 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 2, LittlerootTown_EventScript_MoveMomToMaysDoor
 	call_if_unset FLAG_RESCUED_BIRCH, LittlerootTown_EventScript_SetTwinPos
 	call_if_eq VAR_LITTLEROOT_TOWN_STATE, 3, LittlerootTown_EventScript_SetMomStandingInFrontOfDoorPos
@@ -112,6 +113,10 @@ LittlerootTown_OnFrame:
 	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 1, LittlerootTown_EventScript_StepOffTruckMale
 	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 2, LittlerootTown_EventScript_StepOffTruckFemale
 	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1, LittlerootTown_EventScript_BeginDexUpgradeScene
+	.2byte 0
+
+LittlerootTown_MayCallsOver:
+	map_script_2 VAR_TEMP_0, 1, LittlerootTown_EventScript_MayCallsOver
 	.2byte 0
 
 LittlerootTown_EventScript_StepOffTruckMale::
@@ -1022,17 +1027,29 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "Let's go to my LAB.$"
 `
 
-script LittlerootTown_NewRivalSetup {
+script LittlerootTown_EventScript_NewRivalSetup {
 	if (!(flag(FLAG_WINGULL_CHOSEN) || flag(FLAG_NUMEL_CHOSEN) || flag(FLAG_LARVITAR_CHOSEN) || flag(FLAG_SPHEAL_CHOSEN))){	
 		setflag(FLAG_BEFORE_MAY_BATTLE)
 		setvar(VAR_LITTLEROOT_STATE, 0)
+		setvar(VAR_LITTLEROOT_RIVAL, 0)
 	}
 	else{
 		if(var(VAR_LITTLEROOT_STATE) == 0){
 			clearflag(FLAG_BEFORE_MAY_BATTLE)
 			setflag(FLAG_NEW_MAY_BATTLE)
-			removeobject(11)
+			if(flag(FLAG_WINGULL_CHOSEN) || flag(FLAG_SPHEAL_CHOSEN)){
+				setvar(VAR_LITTLEROOT_RIVAL, 1)
+			}
+			elif(flag(FLAG_LARVITAR_CHOSEN)){
+				setvar(VAR_LITTLEROOT_RIVAL, 2)
+			}
+			elif(flag(FLAG_NUMEL_CHOSEN)){
+				setvar(VAR_LITTLEROOT_RIVAL, 3)
+			}				
 		}
+	}
+	if(flag(FLAG_NEW_MAY_BATTLE) && !flag(FLAG_ADVENTURE_STARTED) && !(defeated(TRAINER_MAY_ROUTE_103_TORCHIC) || defeated(TRAINER_MAY_ROUTE_103_TREECKO) || defeated(TRAINER_MAY_ROUTE_103_MUDKIP))){
+		setvar(VAR_TEMP_0, 1)
 	}
 }
 
@@ -1046,6 +1063,73 @@ script LittlerootTown_EventScript_OldGymSign {
     lockall
 	call(LittlerootTown_GymSign_Text)
     releaseall
+}
+
+script LittlerootTown_EventScript_BlockPlayer{
+	lockall
+	msgbox(LittlerootTown_BeforePrologue, MSGBOX_DEFAULT)
+	applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer)
+	waitmovement(0)
+	releaseall
+}
+
+script LittlerootTown_EventScript_NewRivalMay{
+	lockall
+	faceplayer
+	msgbox(LittlerootTown_Idle_NewRivalMay, MSGBOX_DEFAULT)
+	waitmessage
+	releaseall
+}
+
+script LittlerootTown_EventScript_MayCallsOver{
+	applymovement(12, LookAtPlayer)
+	applymovement(OBJ_EVENT_ID_PLAYER, LookAtMay)
+	dofieldeffect(FLDEFF_EXCLAMATION_MARK_ICON)
+	msgbox(LittlerootTown_NewRivalMay_ComeHere, MSGBOX_AUTOCLOSE)
+	setvar(VAR_TEMP_0, 2)
+}
+
+script LittlerootTown_EventScript_NewRivalMayBattle{
+	msgbox(LittlerootTown_NewRivalMay_Intro, MSGBOX_DEFAULT)
+	closemessage
+	switch (var(VAR_LITTLEROOT_RIVAL)){
+		case 1:
+			call(LittlerootTown_EventScript_MayMudkip)
+		case 2:
+			call(LittlerootTown_EventScript_MayTorchic)
+		case 3:
+			call(LittlerootTown_EventScript_MayTreecko)
+	}
+	end
+}
+
+script LittlerootTown_EventScript_MayMudkip{
+	trainerbattle_no_intro(TRAINER_MAY_ROUTE_103_TORCHIC, LittlerootTown_NewRivalMay_Outro)
+	call(LittlerootTown_RivalBattleOver)
+	end
+}
+
+script LittlerootTown_EventScript_MayTorchic{
+	trainerbattle_no_intro(TRAINER_MAY_ROUTE_103_TREECKO, LittlerootTown_NewRivalMay_Outro)
+	call(LittlerootTown_RivalBattleOver)
+	end
+}
+
+script LittlerootTown_EventScript_MayTreecko{
+	trainerbattle_no_intro(TRAINER_MAY_ROUTE_103_MUDKIP, LittlerootTown_NewRivalMay_Outro)
+	call(LittlerootTown_RivalBattleOver)
+	end
+}
+
+script LittlerootTown_RivalBattleOver{
+	lockall
+	msgbox(LittlerootTown_PostBattle_NewRivalMay, MSGBOX_AUTOCLOSE)
+	applymovement(12, MayLeave)
+	waitmovement(0)
+	removeobject(12)
+	setvar(VAR_LITTLEROOT_STATE, 1)
+	setflag(FLAG_ADVENTURE_STARTED)
+	releaseall
 }
 
 script LittlerootTown_EventScript_DeveloperRuby{
@@ -1066,38 +1150,6 @@ script LittlerootTown_EventScript_DeveloperRubyBattle{
 	msgbox(LittlerootTown_PostBattle_Ruby, MSGBOX_AUTOCLOSE) 
 	waitmessage
 	end
-}
-
-script LittlerootTown_EventScript_NewRivalMay{
-	lockall
-	faceplayer
-	msgbox(LittlerootTown_Idle_NewRivalMay, MSGBOX_DEFAULT)
-	waitmessage
-	releaseall
-}
-
-script LittlerootTown_EventScript_NewRivalMayBattle{
-	trainerbattle_single(TRAINER_MAY_ROUTE_103_MUDKIP, LittlerootTown_NewRivalMay_Intro, LittlerootTown_NewRivalMay_Outro, LittlerootTown_RivalBattleOver)
-	end
-}
-
-script LittlerootTown_RivalBattleOver{
-	lockall
-	msgbox(LittlerootTown_PostBattle_NewRivalMay, MSGBOX_DEFAULT)
-	waitmessage
-	waitbuttonpress
-	applymovement(12, MayLeave)
-	waitmovement(0)
-	removeobject(12)
-	setvar(VAR_LITTLEROOT_STATE, 1)
-	setflag(FLAG_ADVENTURE_STARTED)
-	releaseall
-}
-
-movement MayLeave {
-	face_right
-	walk_right * 2
-	walk_up * 7
 }
 
 script LittlerootTown_EventScript_Kyogre {
@@ -1144,6 +1196,26 @@ script RanAway {
 	return
 }
 
+movement StopPlayer {
+	walk_down * 2
+}
+
+movement LookAtMay {
+	face_right
+}
+
+movement LookAtPlayer {
+	face_left
+}
+
+movement MayLeave {
+	walk_up * 7
+}
+
+text LittlerootTown_BeforePrologue {
+	format("I probably shouldn't go out yet. I might not be ready!")
+}
+
 text LittlerootTown_GymSign_Text{
 	format ("It's an old worn out sign, but you can\n faintly read its text.\p LITTLEROOT TOWN POKÉMON GYM\n LEADER: BIRCH\n The pursuant scientist!")
 }
@@ -1169,8 +1241,12 @@ text LittlerootTown_Idle_NewRivalMay{
 	format("MAY: Hey! This is my dad's old gym.\nThere's definitely some interesting things inside.")
 }
 
+text LittlerootTown_NewRivalMay_ComeHere{
+	format("MAY: I see you got a Pokémon! Let's do a trainer battle!")
+}
+
 text LittlerootTown_NewRivalMay_Intro{
-    "MAY: Oh you got one! Let's battle!"
+    "MAY: Are you ready?"
 }
  
 text LittlerootTown_NewRivalMay_Outro{
