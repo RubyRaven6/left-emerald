@@ -2262,191 +2262,199 @@ LittlerootTown_RivalBattleOver::
 # 1121 "data/maps/LittlerootTown/scripts.pory"
 	lockall
 # 1122 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_PostBattle_NewRivalMay, MSGBOX_AUTOCLOSE
+	special HealPlayerParty
 # 1123 "data/maps/LittlerootTown/scripts.pory"
-	applymovement 12, MayLeave
+	msgbox LittlerootTown_PostBattle_NewRivalMay, MSGBOX_AUTOCLOSE
 # 1124 "data/maps/LittlerootTown/scripts.pory"
-	waitmovement 0
+	applymovement 12, MayLeave
 # 1125 "data/maps/LittlerootTown/scripts.pory"
-	removeobject 12
+	waitmovement 0
 # 1126 "data/maps/LittlerootTown/scripts.pory"
-	setvar VAR_LITTLEROOT_STATE, 1
+	removeobject 12
 # 1127 "data/maps/LittlerootTown/scripts.pory"
-	setflag FLAG_ADVENTURE_STARTED
+	setvar VAR_LITTLEROOT_STATE, 1
 # 1128 "data/maps/LittlerootTown/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 1129 "data/maps/LittlerootTown/scripts.pory"
+	setflag FLAG_ADVENTURE_STARTED
+# 1130 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
 	return
 
 
 LittlerootTown_EventScript_DeveloperRuby::
-# 1132 "data/maps/LittlerootTown/scripts.pory"
+# 1134 "data/maps/LittlerootTown/scripts.pory"
 	goto_if_unset FLAG_WINGULL_CHOSEN, LittlerootTown_EventScript_DeveloperRuby_3
 LittlerootTown_EventScript_DeveloperRuby_2:
-# 1140 "data/maps/LittlerootTown/scripts.pory"
+# 1142 "data/maps/LittlerootTown/scripts.pory"
 	call LittlerootTown_EventScript_DeveloperRubyBattle
 	return
 
 LittlerootTown_EventScript_DeveloperRuby_1:
-# 1133 "data/maps/LittlerootTown/scripts.pory"
-	lockall
-# 1134 "data/maps/LittlerootTown/scripts.pory"
-	faceplayer
 # 1135 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_Idle_Ruby, MSGBOX_DEFAULT
+	lockall
 # 1136 "data/maps/LittlerootTown/scripts.pory"
-	waitmessage
+	faceplayer
 # 1137 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_Idle_Ruby, MSGBOX_DEFAULT
+# 1138 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+# 1139 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
 	return
 
 LittlerootTown_EventScript_DeveloperRuby_3:
-# 1132 "data/maps/LittlerootTown/scripts.pory"
+# 1134 "data/maps/LittlerootTown/scripts.pory"
 	goto_if_unset FLAG_NUMEL_CHOSEN, LittlerootTown_EventScript_DeveloperRuby_5
 	goto LittlerootTown_EventScript_DeveloperRuby_2
 
 LittlerootTown_EventScript_DeveloperRuby_5:
-# 1132 "data/maps/LittlerootTown/scripts.pory"
+# 1134 "data/maps/LittlerootTown/scripts.pory"
 	goto_if_unset FLAG_LARVITAR_CHOSEN, LittlerootTown_EventScript_DeveloperRuby_7
 	goto LittlerootTown_EventScript_DeveloperRuby_2
 
 LittlerootTown_EventScript_DeveloperRuby_7:
-# 1132 "data/maps/LittlerootTown/scripts.pory"
+# 1134 "data/maps/LittlerootTown/scripts.pory"
 	goto_if_unset FLAG_SPHEAL_CHOSEN, LittlerootTown_EventScript_DeveloperRuby_1
 	goto LittlerootTown_EventScript_DeveloperRuby_2
 
 
 LittlerootTown_EventScript_DeveloperRubyBattle::
-# 1145 "data/maps/LittlerootTown/scripts.pory"
-	trainerbattle_single TRAINER_RUBY, LittlerootTown_Ruby_Intro, LittlerootTown_Ruby_Outro
-# 1146 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_PostBattle_Ruby, MSGBOX_AUTOCLOSE
 # 1147 "data/maps/LittlerootTown/scripts.pory"
+	trainerbattle_single TRAINER_RUBY, LittlerootTown_Ruby_Intro, LittlerootTown_Ruby_Outro
+# 1148 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_PostBattle_Ruby, MSGBOX_AUTOCLOSE
+# 1149 "data/maps/LittlerootTown/scripts.pory"
 	waitmessage
 	end
 
 
 LittlerootTown_EventScript_Kyogre::
-# 1152 "data/maps/LittlerootTown/scripts.pory"
-	lockall
-# 1153 "data/maps/LittlerootTown/scripts.pory"
-	setflag FLAG_UNUSED_0x496
 # 1154 "data/maps/LittlerootTown/scripts.pory"
-	playmoncry SPECIES_KYOGRE, CRY_MODE_ENCOUNTER
+	lockall
 # 1155 "data/maps/LittlerootTown/scripts.pory"
-	delay 40
+	setflag FLAG_UNUSED_0x496
 # 1156 "data/maps/LittlerootTown/scripts.pory"
-	waitmoncry
+	playmoncry SPECIES_KYOGRE, CRY_MODE_ENCOUNTER
 # 1157 "data/maps/LittlerootTown/scripts.pory"
-	setwildbattle SPECIES_KYOGRE, 15, ITEM_BLUE_ORB
+	delay 40
 # 1158 "data/maps/LittlerootTown/scripts.pory"
-	dowildbattle
+	waitmoncry
 # 1159 "data/maps/LittlerootTown/scripts.pory"
-	specialvar VAR_RESULT, GetBattleOutcome
+	setwildbattle SPECIES_KYOGRE, 15, ITEM_BLUE_ORB
 # 1160 "data/maps/LittlerootTown/scripts.pory"
+	dowildbattle
+# 1161 "data/maps/LittlerootTown/scripts.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 1162 "data/maps/LittlerootTown/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_eq LittlerootTown_EventScript_Kyogre_2
-# 1163 "data/maps/LittlerootTown/scripts.pory"
+# 1165 "data/maps/LittlerootTown/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq LittlerootTown_EventScript_Kyogre_3
-# 1166 "data/maps/LittlerootTown/scripts.pory"
+# 1168 "data/maps/LittlerootTown/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_RAN
 	goto_if_eq LittlerootTown_EventScript_Kyogre_4
-# 1169 "data/maps/LittlerootTown/scripts.pory"
+# 1171 "data/maps/LittlerootTown/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
 	goto_if_eq LittlerootTown_EventScript_Kyogre_5
 LittlerootTown_EventScript_Kyogre_1:
-# 1172 "data/maps/LittlerootTown/scripts.pory"
+# 1174 "data/maps/LittlerootTown/scripts.pory"
 	waitmessage
-# 1173 "data/maps/LittlerootTown/scripts.pory"
+# 1175 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
 	return
 
 LittlerootTown_EventScript_Kyogre_2:
-# 1161 "data/maps/LittlerootTown/scripts.pory"
+# 1163 "data/maps/LittlerootTown/scripts.pory"
 	call Won_or_Caught
 	goto LittlerootTown_EventScript_Kyogre_1
 
 LittlerootTown_EventScript_Kyogre_3:
-# 1164 "data/maps/LittlerootTown/scripts.pory"
+# 1166 "data/maps/LittlerootTown/scripts.pory"
 	call Won_or_Caught
 	goto LittlerootTown_EventScript_Kyogre_1
 
 LittlerootTown_EventScript_Kyogre_4:
-# 1167 "data/maps/LittlerootTown/scripts.pory"
+# 1169 "data/maps/LittlerootTown/scripts.pory"
 	call RanAway
 	goto LittlerootTown_EventScript_Kyogre_1
 
 LittlerootTown_EventScript_Kyogre_5:
-# 1170 "data/maps/LittlerootTown/scripts.pory"
+# 1172 "data/maps/LittlerootTown/scripts.pory"
 	call RanAway
 	goto LittlerootTown_EventScript_Kyogre_1
 
 
 Won_or_Caught::
-# 1177 "data/maps/LittlerootTown/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 1178 "data/maps/LittlerootTown/scripts.pory"
-	removeobject 10
 # 1179 "data/maps/LittlerootTown/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	fadescreen FADE_TO_BLACK
 # 1180 "data/maps/LittlerootTown/scripts.pory"
+	removeobject 10
+# 1181 "data/maps/LittlerootTown/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 1182 "data/maps/LittlerootTown/scripts.pory"
 	msgbox Won_or_Caught_Text_0
 	return
 
 
+Littleroot_Mart_Employee::
+	return
+
+
 RanAway::
-# 1185 "data/maps/LittlerootTown/scripts.pory"
-	playmoncry SPECIES_KYOGRE, CRY_MODE_ENCOUNTER
-# 1186 "data/maps/LittlerootTown/scripts.pory"
-	msgbox RanAway_Text_0, MSGBOX_AUTOCLOSE
-# 1187 "data/maps/LittlerootTown/scripts.pory"
-	delay 20
-# 1188 "data/maps/LittlerootTown/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 1189 "data/maps/LittlerootTown/scripts.pory"
-	removeobject 10
-# 1190 "data/maps/LittlerootTown/scripts.pory"
-	fadescreen FADE_FROM_BLACK
 # 1191 "data/maps/LittlerootTown/scripts.pory"
+	playmoncry SPECIES_KYOGRE, CRY_MODE_ENCOUNTER
+# 1192 "data/maps/LittlerootTown/scripts.pory"
+	msgbox RanAway_Text_0, MSGBOX_AUTOCLOSE
+# 1193 "data/maps/LittlerootTown/scripts.pory"
+	delay 20
+# 1194 "data/maps/LittlerootTown/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 1195 "data/maps/LittlerootTown/scripts.pory"
+	removeobject 10
+# 1196 "data/maps/LittlerootTown/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 1197 "data/maps/LittlerootTown/scripts.pory"
 	msgbox RanAway_Text_1
 	return
 
 
-# 1195 "data/maps/LittlerootTown/scripts.pory"
+# 1201 "data/maps/LittlerootTown/scripts.pory"
 StopPlayer:
-# 1196 "data/maps/LittlerootTown/scripts.pory"
+# 1202 "data/maps/LittlerootTown/scripts.pory"
 	walk_down
-# 1196 "data/maps/LittlerootTown/scripts.pory"
+# 1202 "data/maps/LittlerootTown/scripts.pory"
 	walk_down
 	step_end
 
-# 1199 "data/maps/LittlerootTown/scripts.pory"
+# 1205 "data/maps/LittlerootTown/scripts.pory"
 LookAtMay:
-# 1200 "data/maps/LittlerootTown/scripts.pory"
+# 1206 "data/maps/LittlerootTown/scripts.pory"
 	face_right
 	step_end
 
-# 1203 "data/maps/LittlerootTown/scripts.pory"
+# 1209 "data/maps/LittlerootTown/scripts.pory"
 LookAtPlayer:
-# 1204 "data/maps/LittlerootTown/scripts.pory"
+# 1210 "data/maps/LittlerootTown/scripts.pory"
 	face_left
 	step_end
 
-# 1207 "data/maps/LittlerootTown/scripts.pory"
+# 1213 "data/maps/LittlerootTown/scripts.pory"
 MayLeave:
-# 1208 "data/maps/LittlerootTown/scripts.pory"
+# 1214 "data/maps/LittlerootTown/scripts.pory"
 	walk_up
-# 1208 "data/maps/LittlerootTown/scripts.pory"
+# 1214 "data/maps/LittlerootTown/scripts.pory"
 	walk_up
-# 1208 "data/maps/LittlerootTown/scripts.pory"
+# 1214 "data/maps/LittlerootTown/scripts.pory"
 	walk_up
-# 1208 "data/maps/LittlerootTown/scripts.pory"
+# 1214 "data/maps/LittlerootTown/scripts.pory"
 	walk_up
-# 1208 "data/maps/LittlerootTown/scripts.pory"
+# 1214 "data/maps/LittlerootTown/scripts.pory"
 	walk_up
-# 1208 "data/maps/LittlerootTown/scripts.pory"
+# 1214 "data/maps/LittlerootTown/scripts.pory"
 	walk_up
-# 1208 "data/maps/LittlerootTown/scripts.pory"
+# 1214 "data/maps/LittlerootTown/scripts.pory"
 	walk_up
 	step_end
 
@@ -2455,24 +2463,24 @@ LittlerootTown_EventScript_WarehouseSign_Text_0:
 	.string "BIRCH'S WAREHOUSE$"
 
 Won_or_Caught_Text_0:
-# 1180 "data/maps/LittlerootTown/scripts.pory"
+# 1182 "data/maps/LittlerootTown/scripts.pory"
 	.string "You are the Pokemon Master!$"
 
 RanAway_Text_0:
-# 1186 "data/maps/LittlerootTown/scripts.pory"
+# 1192 "data/maps/LittlerootTown/scripts.pory"
 	.string "Kyuhh....$"
 
 RanAway_Text_1:
-# 1191 "data/maps/LittlerootTown/scripts.pory"
+# 1197 "data/maps/LittlerootTown/scripts.pory"
 	.string "You are not the Pokemon Master.$"
 
 LittlerootTown_BeforePrologue::
-# 1211 "data/maps/LittlerootTown/scripts.pory"
+# 1217 "data/maps/LittlerootTown/scripts.pory"
 	.string "I probably shouldn't go out yet. I might\n"
 	.string "not be ready!$"
 
 LittlerootTown_GymSign_Text::
-# 1215 "data/maps/LittlerootTown/scripts.pory"
+# 1221 "data/maps/LittlerootTown/scripts.pory"
 	.string "It's an old worn out sign, but you can\n"
 	.string "faintly read its text.\p"
 	.string "LITTLEROOT TOWN POKÉMON GYM\n"
@@ -2480,40 +2488,40 @@ LittlerootTown_GymSign_Text::
 	.string "The pursuant scientist!$"
 
 LittlerootTown_Idle_Ruby::
-# 1220 "data/maps/LittlerootTown/scripts.pory"
+# 1226 "data/maps/LittlerootTown/scripts.pory"
 	.string "RUBY: Hi! I'm the developer! Nice to\nmeet ya.$"
 
 LittlerootTown_Ruby_Intro::
-# 1224 "data/maps/LittlerootTown/scripts.pory"
+# 1230 "data/maps/LittlerootTown/scripts.pory"
 	.string "RUBY: Oh hey! You got a Pokémon! Let's battle!$"
 
 LittlerootTown_Ruby_Outro::
-# 1228 "data/maps/LittlerootTown/scripts.pory"
+# 1234 "data/maps/LittlerootTown/scripts.pory"
 	.string "RUBY: That was fun!$"
 
 LittlerootTown_PostBattle_Ruby::
-# 1232 "data/maps/LittlerootTown/scripts.pory"
+# 1238 "data/maps/LittlerootTown/scripts.pory"
 	.string "RUBY: I look forward to next time!$"
 
 LittlerootTown_Idle_NewRivalMay::
-# 1236 "data/maps/LittlerootTown/scripts.pory"
+# 1242 "data/maps/LittlerootTown/scripts.pory"
 	.string "MAY: Hey! This is my dad's old gym.\n"
 	.string "There's definitely some interesting\l"
 	.string "things inside.$"
 
 LittlerootTown_NewRivalMay_ComeHere::
-# 1240 "data/maps/LittlerootTown/scripts.pory"
+# 1246 "data/maps/LittlerootTown/scripts.pory"
 	.string "MAY: I see you got a Pokémon! Let's do a\n"
 	.string "trainer battle!$"
 
 LittlerootTown_NewRivalMay_Intro::
-# 1244 "data/maps/LittlerootTown/scripts.pory"
+# 1250 "data/maps/LittlerootTown/scripts.pory"
 	.string "MAY: Are you ready?$"
 
 LittlerootTown_NewRivalMay_Outro::
-# 1248 "data/maps/LittlerootTown/scripts.pory"
+# 1254 "data/maps/LittlerootTown/scripts.pory"
 	.string "MAY: That was fun!$"
 
 LittlerootTown_PostBattle_NewRivalMay::
-# 1252 "data/maps/LittlerootTown/scripts.pory"
+# 1258 "data/maps/LittlerootTown/scripts.pory"
 	.string "MAY: I look forward to next time! I gotta\ngo!$"

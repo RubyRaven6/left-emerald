@@ -1119,6 +1119,7 @@ script LittlerootTown_EventScript_MayTreecko{
 
 script LittlerootTown_RivalBattleOver{
 	lockall
+	special(HealPlayerParty)
 	msgbox(LittlerootTown_PostBattle_NewRivalMay, MSGBOX_AUTOCLOSE)
 	applymovement(12, MayLeave)
 	waitmovement(0)
@@ -1180,7 +1181,7 @@ script Won_or_Caught {
 	msgbox("You are the Pokemon Master!")
 	return
 }
- 
+
 script RanAway {
 	playmoncry(SPECIES_KYOGRE, CRY_MODE_ENCOUNTER)
 	msgbox("Kyuhh....", MSGBOX_AUTOCLOSE)
@@ -1213,16 +1214,16 @@ text LittlerootTown_BeforePrologue {
 }
 
 text LittlerootTown_GymSign_Text{
-	format ("It's an old worn out sign, but you can\n faintly read its text.\p LITTLEROOT TOWN POKÉMON GYM\n LEADER: BIRCH\n The pursuant scientist!")
+	format ("It's an old worn out sign, but you can faintly read its text.\p LITTLEROOT TOWN POKÉMON GYM\n LEADER: BIRCH\n The pursuant scientist!")
 }
 
 
 text LittlerootTown_Idle_Ruby{
-	"RUBY: Hi! I'm the developer! Nice to\nmeet ya."
+	format("RUBY: Hi! I'm the developer! Nice to meet ya.")
 }
 
 text LittlerootTown_Ruby_Intro{
-    "RUBY: Oh hey! You got a Pokémon! Let's battle!"
+    format("RUBY: Oh hey! You got a Pokémon! Let's battle!")
 }
  
 text LittlerootTown_Ruby_Outro{
@@ -1250,5 +1251,5 @@ text LittlerootTown_NewRivalMay_Outro{
 }
  
 text LittlerootTown_PostBattle_NewRivalMay{
-    "MAY: I look forward to next time! I gotta\ngo!"
+    format("MAY: I look forward to next time! I gotta go!")
 }

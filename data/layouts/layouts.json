@@ -94,7 +94,7 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN",
       "name": "LittlerootTown_Layout",
-      "width": 30,
+      "width": 40,
       "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
@@ -4430,6 +4430,16 @@
       "secondary_tileset": "gTileset_RustboroGym",
       "border_filepath": "data/layouts/LittlerootTown_OldGym/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_OldGym/map.bin"
+    },
+    {
+      "id": "LAYOUT_LITTLEROOT_TOWN_MART",
+      "name": "LittlerootTown_Mart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/LittlerootTown_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTown_Mart/map.bin"
     }
   ]
 }

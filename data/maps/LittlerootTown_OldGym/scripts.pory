@@ -17,6 +17,7 @@ script LittlerootTown_OldGym_EventScript_GymStatue {
 script LittlerootTown_OldGym_EventScript_PokeballWingull{
     lockall
     if (!(flag(FLAG_WINGULL_CHOSEN) || flag(FLAG_NUMEL_CHOSEN) || flag(FLAG_LARVITAR_CHOSEN) || flag(FLAG_SPHEAL_CHOSEN))){
+        setflag(FLAG_SYS_POKEMON_GET)
        call(LittlerootTown_OldGym_EventScript_Wingull)
 	}
     else{
@@ -30,6 +31,7 @@ script LittlerootTown_OldGym_EventScript_PokeballWingull{
 script LittlerootTown_OldGym_EventScript_PokeballNumel{
     lockall
     if (!(flag(FLAG_WINGULL_CHOSEN) || flag(FLAG_NUMEL_CHOSEN) || flag(FLAG_LARVITAR_CHOSEN) || flag(FLAG_SPHEAL_CHOSEN))){
+        setflag(FLAG_SYS_POKEMON_GET)
        call(LittlerootTown_OldGym_EventScript_Numel)
 	}
     else{
@@ -43,6 +45,7 @@ script LittlerootTown_OldGym_EventScript_PokeballNumel{
 script LittlerootTown_OldGym_EventScript_PokeballLarvitar{
     lockall
     if (!(flag(FLAG_WINGULL_CHOSEN) || flag(FLAG_NUMEL_CHOSEN) || flag(FLAG_LARVITAR_CHOSEN) || flag(FLAG_SPHEAL_CHOSEN))){
+        setflag(FLAG_SYS_POKEMON_GET)
        call(LittlerootTown_OldGym_EventScript_Larvitar)
 	}
     else{
@@ -56,6 +59,7 @@ script LittlerootTown_OldGym_EventScript_PokeballLarvitar{
 script LittlerootTown_OldGym_EventScript_PokeballSpheal{
     lockall
     if (!(flag(FLAG_WINGULL_CHOSEN) || flag(FLAG_NUMEL_CHOSEN) || flag(FLAG_LARVITAR_CHOSEN) || flag(FLAG_SPHEAL_CHOSEN))){
+        setflag(FLAG_SYS_POKEMON_GET)
        call(LittlerootTown_OldGym_EventScript_Spheal)
 	}
     else{
@@ -76,6 +80,7 @@ script LittlerootTown_OldGym_EventScript_Wingull{
             msgbox("Adopted Wingull!")
             removeobject(1)
             setflag(FLAG_WINGULL_CHOSEN)
+            setflag(FLAG_SYS_POKEMON_GET)
             call(NicknamePartyMon)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
@@ -83,6 +88,7 @@ script LittlerootTown_OldGym_EventScript_Wingull{
             msgbox("Adopted Wingull!")
             removeobject(1)
             setflag(FLAG_WINGULL_CHOSEN)
+            setflag(FLAG_SYS_POKEMON_GET)
             call(NicknameBoxMon)
         }
         else{
@@ -107,6 +113,7 @@ script LittlerootTown_OldGym_EventScript_Numel{
             msgbox("Adopted Numel!")
             removeobject(2)
             setflag(FLAG_NUMEL_CHOSEN)
+            setflag(FLAG_SYS_POKEMON_GET)
             call(NicknamePartyMon)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
@@ -114,6 +121,7 @@ script LittlerootTown_OldGym_EventScript_Numel{
             msgbox("Adopted Numel!")
             removeobject(2)
             setflag(FLAG_NUMEL_CHOSEN)
+            setflag(FLAG_SYS_POKEMON_GET)
             call(NicknameBoxMon)
         }
         else{
@@ -138,6 +146,7 @@ script LittlerootTown_OldGym_EventScript_Larvitar{
             msgbox("Adopted Larvitar!")
             removeobject(3)
             setflag(FLAG_LARVITAR_CHOSEN)
+            setflag(FLAG_SYS_POKEMON_GET)
             call(NicknamePartyMon)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
@@ -145,6 +154,7 @@ script LittlerootTown_OldGym_EventScript_Larvitar{
             msgbox("Adopted Larvitar!")
             removeobject(3)
             setflag(FLAG_LARVITAR_CHOSEN)
+            setflag(FLAG_SYS_POKEMON_GET)
             call(NicknameBoxMon)
         }
         else{
@@ -169,6 +179,7 @@ script LittlerootTown_OldGym_EventScript_Spheal{
             msgbox("Adopted Spheal!")
             removeobject(4)
             setflag(FLAG_SPHEAL_CHOSEN)
+            setflag(FLAG_SYS_POKEMON_GET)
             call(NicknamePartyMon)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
@@ -176,6 +187,7 @@ script LittlerootTown_OldGym_EventScript_Spheal{
             msgbox("Adopted Spheal!")
             removeobject(4)
             setflag(FLAG_SPHEAL_CHOSEN)
+            setflag(FLAG_SYS_POKEMON_GET)
             call(NicknameBoxMon)
         }
         else{
