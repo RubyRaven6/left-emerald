@@ -34,17 +34,19 @@ LittlerootTown_OldGym_EventScript_PokeballWingull::
 # 19 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	goto_if_unset FLAG_WINGULL_CHOSEN, LittlerootTown_OldGym_EventScript_PokeballWingull_4
 LittlerootTown_OldGym_EventScript_PokeballWingull_3:
-# 23 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 24 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittlerootTown_OldGym_EventScript_PokeballWingull_Text_0
 LittlerootTown_OldGym_EventScript_PokeballWingull_1:
-# 25 "data/maps/LittlerootTown_OldGym/scripts.pory"
-	waitmessage
 # 26 "data/maps/LittlerootTown_OldGym/scripts.pory"
+	waitmessage
+# 27 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	releaseall
 	end
 
 LittlerootTown_OldGym_EventScript_PokeballWingull_2:
 # 20 "data/maps/LittlerootTown_OldGym/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 21 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	call LittlerootTown_OldGym_EventScript_Wingull
 	goto LittlerootTown_OldGym_EventScript_PokeballWingull_1
 
@@ -65,370 +67,392 @@ LittlerootTown_OldGym_EventScript_PokeballWingull_8:
 
 
 LittlerootTown_OldGym_EventScript_PokeballNumel::
-# 31 "data/maps/LittlerootTown_OldGym/scripts.pory"
-	lockall
 # 32 "data/maps/LittlerootTown_OldGym/scripts.pory"
+	lockall
+# 33 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	goto_if_unset FLAG_WINGULL_CHOSEN, LittlerootTown_OldGym_EventScript_PokeballNumel_4
 LittlerootTown_OldGym_EventScript_PokeballNumel_3:
-# 36 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 38 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittlerootTown_OldGym_EventScript_PokeballWingull_Text_0
 LittlerootTown_OldGym_EventScript_PokeballNumel_1:
-# 38 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 40 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	waitmessage
-# 39 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 41 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	releaseall
 	end
 
 LittlerootTown_OldGym_EventScript_PokeballNumel_2:
-# 33 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 34 "data/maps/LittlerootTown_OldGym/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 35 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	call LittlerootTown_OldGym_EventScript_Numel
 	goto LittlerootTown_OldGym_EventScript_PokeballNumel_1
 
 LittlerootTown_OldGym_EventScript_PokeballNumel_4:
-# 32 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 33 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	goto_if_unset FLAG_NUMEL_CHOSEN, LittlerootTown_OldGym_EventScript_PokeballNumel_6
 	goto LittlerootTown_OldGym_EventScript_PokeballNumel_3
 
 LittlerootTown_OldGym_EventScript_PokeballNumel_6:
-# 32 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 33 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	goto_if_unset FLAG_LARVITAR_CHOSEN, LittlerootTown_OldGym_EventScript_PokeballNumel_8
 	goto LittlerootTown_OldGym_EventScript_PokeballNumel_3
 
 LittlerootTown_OldGym_EventScript_PokeballNumel_8:
-# 32 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 33 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	goto_if_unset FLAG_SPHEAL_CHOSEN, LittlerootTown_OldGym_EventScript_PokeballNumel_2
 	goto LittlerootTown_OldGym_EventScript_PokeballNumel_3
 
 
 LittlerootTown_OldGym_EventScript_PokeballLarvitar::
-# 44 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 46 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	lockall
-# 45 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 47 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	goto_if_unset FLAG_WINGULL_CHOSEN, LittlerootTown_OldGym_EventScript_PokeballLarvitar_4
 LittlerootTown_OldGym_EventScript_PokeballLarvitar_3:
-# 49 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 52 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittlerootTown_OldGym_EventScript_PokeballWingull_Text_0
 LittlerootTown_OldGym_EventScript_PokeballLarvitar_1:
-# 51 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 54 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	waitmessage
-# 52 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 55 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	releaseall
 	end
 
 LittlerootTown_OldGym_EventScript_PokeballLarvitar_2:
-# 46 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 48 "data/maps/LittlerootTown_OldGym/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 49 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	call LittlerootTown_OldGym_EventScript_Larvitar
 	goto LittlerootTown_OldGym_EventScript_PokeballLarvitar_1
 
 LittlerootTown_OldGym_EventScript_PokeballLarvitar_4:
-# 45 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 47 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	goto_if_unset FLAG_NUMEL_CHOSEN, LittlerootTown_OldGym_EventScript_PokeballLarvitar_6
 	goto LittlerootTown_OldGym_EventScript_PokeballLarvitar_3
 
 LittlerootTown_OldGym_EventScript_PokeballLarvitar_6:
-# 45 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 47 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	goto_if_unset FLAG_LARVITAR_CHOSEN, LittlerootTown_OldGym_EventScript_PokeballLarvitar_8
 	goto LittlerootTown_OldGym_EventScript_PokeballLarvitar_3
 
 LittlerootTown_OldGym_EventScript_PokeballLarvitar_8:
-# 45 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 47 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	goto_if_unset FLAG_SPHEAL_CHOSEN, LittlerootTown_OldGym_EventScript_PokeballLarvitar_2
 	goto LittlerootTown_OldGym_EventScript_PokeballLarvitar_3
 
 
 LittlerootTown_OldGym_EventScript_PokeballSpheal::
-# 57 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 60 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	lockall
-# 58 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 61 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	goto_if_unset FLAG_WINGULL_CHOSEN, LittlerootTown_OldGym_EventScript_PokeballSpheal_4
 LittlerootTown_OldGym_EventScript_PokeballSpheal_3:
-# 62 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 66 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittlerootTown_OldGym_EventScript_PokeballWingull_Text_0
 LittlerootTown_OldGym_EventScript_PokeballSpheal_1:
-# 64 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 68 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	waitmessage
-# 65 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 69 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	releaseall
 	end
 
 LittlerootTown_OldGym_EventScript_PokeballSpheal_2:
-# 59 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 62 "data/maps/LittlerootTown_OldGym/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 63 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	call LittlerootTown_OldGym_EventScript_Spheal
 	goto LittlerootTown_OldGym_EventScript_PokeballSpheal_1
 
 LittlerootTown_OldGym_EventScript_PokeballSpheal_4:
-# 58 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 61 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	goto_if_unset FLAG_NUMEL_CHOSEN, LittlerootTown_OldGym_EventScript_PokeballSpheal_6
 	goto LittlerootTown_OldGym_EventScript_PokeballSpheal_3
 
 LittlerootTown_OldGym_EventScript_PokeballSpheal_6:
-# 58 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 61 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	goto_if_unset FLAG_LARVITAR_CHOSEN, LittlerootTown_OldGym_EventScript_PokeballSpheal_8
 	goto LittlerootTown_OldGym_EventScript_PokeballSpheal_3
 
 LittlerootTown_OldGym_EventScript_PokeballSpheal_8:
-# 58 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 61 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	goto_if_unset FLAG_SPHEAL_CHOSEN, LittlerootTown_OldGym_EventScript_PokeballSpheal_2
 	goto LittlerootTown_OldGym_EventScript_PokeballSpheal_3
 
 
 LittlerootTown_OldGym_EventScript_Wingull::
-# 70 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 74 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	showmonpic SPECIES_WINGULL, 10, 3
-# 71 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 75 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittlerootTown_OldGym_EventScript_Wingull_Text_0, MSGBOX_YESNO
-# 72 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 76 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_OldGym_EventScript_Wingull_1
-# 94 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 100 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	hidemonpic
-# 95 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 101 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittleRootTown_OldGym_NotChosen
 	return
 
 LittlerootTown_OldGym_EventScript_Wingull_1:
-# 73 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 77 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	givemon SPECIES_WINGULL, 5, ITEM_MYSTIC_WATER
-# 74 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 78 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_OldGym_EventScript_Wingull_4
-# 81 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 86 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_OldGym_EventScript_Wingull_5
-# 89 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 95 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	hidemonpic
-# 90 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 96 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittlerootTown_OldGym_EventScript_Wingull_Text_2
 	return
 
 LittlerootTown_OldGym_EventScript_Wingull_4:
-# 75 "data/maps/LittlerootTown_OldGym/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 76 "data/maps/LittlerootTown_OldGym/scripts.pory"
-	msgbox LittlerootTown_OldGym_EventScript_Wingull_Text_1
-# 77 "data/maps/LittlerootTown_OldGym/scripts.pory"
-	removeobject 1
-# 78 "data/maps/LittlerootTown_OldGym/scripts.pory"
-	setflag FLAG_WINGULL_CHOSEN
 # 79 "data/maps/LittlerootTown_OldGym/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
+# 80 "data/maps/LittlerootTown_OldGym/scripts.pory"
+	msgbox LittlerootTown_OldGym_EventScript_Wingull_Text_1
+# 81 "data/maps/LittlerootTown_OldGym/scripts.pory"
+	removeobject 1
+# 82 "data/maps/LittlerootTown_OldGym/scripts.pory"
+	setflag FLAG_WINGULL_CHOSEN
+# 83 "data/maps/LittlerootTown_OldGym/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 84 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_OldGym_EventScript_Wingull_5:
-# 82 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 87 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 83 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 88 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittlerootTown_OldGym_EventScript_Wingull_Text_1
-# 84 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 89 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	removeobject 1
-# 85 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 90 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	setflag FLAG_WINGULL_CHOSEN
-# 86 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 91 "data/maps/LittlerootTown_OldGym/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 92 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_OldGym_EventScript_Numel::
-# 101 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 107 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	showmonpic SPECIES_NUMEL, 10, 3
-# 102 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 108 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittlerootTown_OldGym_EventScript_Numel_Text_0, MSGBOX_YESNO
-# 103 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 109 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_OldGym_EventScript_Numel_1
-# 125 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 133 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	hidemonpic
-# 126 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 134 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittleRootTown_OldGym_NotChosen
 	return
 
 LittlerootTown_OldGym_EventScript_Numel_1:
-# 104 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 110 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	givemon SPECIES_NUMEL, 5, ITEM_CHARCOAL
-# 105 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 111 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_OldGym_EventScript_Numel_4
-# 112 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 119 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_OldGym_EventScript_Numel_5
-# 120 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 128 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	hidemonpic
-# 121 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 129 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittlerootTown_OldGym_EventScript_Wingull_Text_2
 	return
 
 LittlerootTown_OldGym_EventScript_Numel_4:
-# 106 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 112 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 107 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 113 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittlerootTown_OldGym_EventScript_Numel_Text_1
-# 108 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 114 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	removeobject 2
-# 109 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 115 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	setflag FLAG_NUMEL_CHOSEN
-# 110 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 116 "data/maps/LittlerootTown_OldGym/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 117 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_OldGym_EventScript_Numel_5:
-# 113 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 120 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 114 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 121 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittlerootTown_OldGym_EventScript_Numel_Text_1
-# 115 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 122 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	removeobject 2
-# 116 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 123 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	setflag FLAG_NUMEL_CHOSEN
-# 117 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 124 "data/maps/LittlerootTown_OldGym/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 125 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_OldGym_EventScript_Larvitar::
-# 132 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 140 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	showmonpic SPECIES_LARVITAR, 10, 3
-# 133 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 141 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittlerootTown_OldGym_EventScript_Larvitar_Text_0, MSGBOX_YESNO
-# 134 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 142 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_OldGym_EventScript_Larvitar_1
-# 156 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 166 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	hidemonpic
-# 157 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 167 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittleRootTown_OldGym_NotChosen
 	return
 
 LittlerootTown_OldGym_EventScript_Larvitar_1:
-# 135 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 143 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	givemon SPECIES_LARVITAR, 5, ITEM_HARD_STONE
-# 136 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 144 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_OldGym_EventScript_Larvitar_4
-# 143 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 152 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_OldGym_EventScript_Larvitar_5
-# 151 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 161 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	hidemonpic
-# 152 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 162 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittlerootTown_OldGym_EventScript_Wingull_Text_2
 	return
 
 LittlerootTown_OldGym_EventScript_Larvitar_4:
-# 137 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 145 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 138 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 146 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittlerootTown_OldGym_EventScript_Larvitar_Text_1
-# 139 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 147 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	removeobject 3
-# 140 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 148 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	setflag FLAG_LARVITAR_CHOSEN
-# 141 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 149 "data/maps/LittlerootTown_OldGym/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 150 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_OldGym_EventScript_Larvitar_5:
-# 144 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 153 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 145 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 154 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittlerootTown_OldGym_EventScript_Larvitar_Text_1
-# 146 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 155 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	removeobject 3
-# 147 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 156 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	setflag FLAG_LARVITAR_CHOSEN
-# 148 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 157 "data/maps/LittlerootTown_OldGym/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 158 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_OldGym_EventScript_Spheal::
-# 163 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 173 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	showmonpic SPECIES_SPHEAL, 10, 3
-# 164 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 174 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittlerootTown_OldGym_EventScript_Spheal_Text_0, MSGBOX_YESNO
-# 165 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 175 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_OldGym_EventScript_Spheal_1
-# 187 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 199 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	hidemonpic
-# 188 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 200 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittleRootTown_OldGym_NotChosen
 	return
 
 LittlerootTown_OldGym_EventScript_Spheal_1:
-# 166 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 176 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	givemon SPECIES_SPHEAL, 5, ITEM_NEVER_MELT_ICE
-# 167 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 177 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_OldGym_EventScript_Spheal_4
-# 174 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 185 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_OldGym_EventScript_Spheal_5
-# 182 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 194 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	hidemonpic
-# 183 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 195 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittlerootTown_OldGym_EventScript_Wingull_Text_2
 	return
 
 LittlerootTown_OldGym_EventScript_Spheal_4:
-# 168 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 178 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 169 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 179 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittlerootTown_OldGym_EventScript_Spheal_Text_1
-# 170 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 180 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	removeobject 4
-# 171 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 181 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	setflag FLAG_SPHEAL_CHOSEN
-# 172 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 182 "data/maps/LittlerootTown_OldGym/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 183 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_OldGym_EventScript_Spheal_5:
-# 175 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 186 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 176 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 187 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox LittlerootTown_OldGym_EventScript_Spheal_Text_1
-# 177 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 188 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	removeobject 4
-# 178 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 189 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	setflag FLAG_SPHEAL_CHOSEN
-# 179 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 190 "data/maps/LittlerootTown_OldGym/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 191 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 NicknamePartyMon::
-# 194 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 206 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox NicknamePartyMon_Text_0, MSGBOX_YESNO
-# 195 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 207 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	hidemonpic
-# 196 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 208 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq NicknamePartyMon_1
 	return
 
 NicknamePartyMon_1:
-# 197 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 209 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	call Common_EventScript_GetGiftMonPartySlot
-# 198 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 210 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	call Common_EventScript_NameReceivedPartyMon
 	return
 
 
 NicknameBoxMon::
-# 205 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 217 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox NicknamePartyMon_Text_0, MSGBOX_YESNO
-# 206 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 218 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	hidemonpic
-# 207 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 219 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq NicknameBoxMon_2
 NicknameBoxMon_1:
-# 210 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 222 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	msgbox NicknameBoxMon_Text_0
 	return
 
 NicknameBoxMon_2:
-# 208 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 220 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	call Common_EventScript_NameReceivedBoxMon
 	goto NicknameBoxMon_1
 
@@ -470,53 +494,53 @@ LittlerootTown_OldGym_EventScript_GymStatue_Text_8:
 	.string "ROXANNE\n$"
 
 LittlerootTown_OldGym_EventScript_PokeballWingull_Text_0:
-# 23 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 24 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	.string "Best to leave it.$"
 
 LittlerootTown_OldGym_EventScript_Wingull_Text_0:
-# 71 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 75 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	.string "Do you want to choose Wingull?$"
 
 LittlerootTown_OldGym_EventScript_Wingull_Text_1:
-# 76 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 80 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	.string "Adopted Wingull!$"
 
 LittlerootTown_OldGym_EventScript_Wingull_Text_2:
-# 90 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 96 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	.string "No more room...$"
 
 LittlerootTown_OldGym_EventScript_Numel_Text_0:
-# 102 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 108 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	.string "Do you want to choose Numel?$"
 
 LittlerootTown_OldGym_EventScript_Numel_Text_1:
-# 107 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 113 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	.string "Adopted Numel!$"
 
 LittlerootTown_OldGym_EventScript_Larvitar_Text_0:
-# 133 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 141 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	.string "Do you want to choose Larvitar?$"
 
 LittlerootTown_OldGym_EventScript_Larvitar_Text_1:
-# 138 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 146 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	.string "Adopted Larvitar!$"
 
 LittlerootTown_OldGym_EventScript_Spheal_Text_0:
-# 164 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 174 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	.string "Do you want to choose Spheal?$"
 
 LittlerootTown_OldGym_EventScript_Spheal_Text_1:
-# 169 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 179 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	.string "Adopted Spheal!$"
 
 NicknamePartyMon_Text_0:
-# 194 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 206 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	.string "Give a nickname?$"
 
 NicknameBoxMon_Text_0:
-# 210 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 222 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	.string "Transferred to PC.$"
 
 LittleRootTown_OldGym_NotChosen::
-# 213 "data/maps/LittlerootTown_OldGym/scripts.pory"
+# 225 "data/maps/LittlerootTown_OldGym/scripts.pory"
 	.string "You did not choose the Pokemon$"
